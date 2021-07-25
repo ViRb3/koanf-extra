@@ -26,7 +26,7 @@ type Env struct {
 	orig     *env.Env
 }
 
-// Provider returns a provider that will infer the correct name for each environment variable based on the exising data stored in koanf.Koanf.
+// Provider returns a provider that will infer the correct name for each environment variable based on the existing data stored in koanf.Koanf.
 // Check the package documentation.
 func Provider(k *koanf.Koanf, prefix, delim string, cb func(s string) string) *Env {
 	return &Env{k, delim, env.Provider(prefix, delim, cb)}
