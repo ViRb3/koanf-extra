@@ -8,6 +8,7 @@
 //    TEST_THE_STUFF
 // However, a parser cannot know whether THE and STUFF are two nested entries or one entry with the name 'THE_STUFF'.
 // This provider will infer the correct name for each environment variable based on the exising data stored in koanf.Koanf.
+// TODO: Fix entries with same path overwriting each other, e.g. TEST_THE_STUFF="bar" and TEST_THE="foo"
 package env
 
 import (
